@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Resource Hub</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+}
+header {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+nav {
+  background: #34495e;
+  padding: 0.5rem;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+section {
+  padding: 20px;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+.card {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+input, select, textarea {
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+}
+button {
+  padding: 10px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.highlight {
+  background: #eafaf1;
+}
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Community Resource Hub</h1>
+  <p>Connecting residents with local support, programs, and opportunities</p>
+</header>
+
+<nav>
+  <a href="#directory">Resource Directory</a>
+  <a href="#highlights">Highlights</a>
+  <a href="#submit">Submit Resource</a>
+</nav>
+
+<section id="directory">
+  <div class="container">
+    <h2>Resource Directory</h2>
+    
+    <input type="text" id="search" placeholder="Search resources...">
+    <select id="filter">
+      <option value="all">All Categories</option>
+      <option value="food">Food</option>
+      <option value="health">Health</option>
+      <option value="education">Education</option>
+    </select>
+
+    <div id="resourceList"></div>
+  </div>
+</section>
+
+<section id="highlights">
+  <div class="container">
+    <h2>Highlighted Resources</h2>
+    <div class="card highlight">
+      <h3>Community Food Bank</h3>
+      <p>Provides free groceries to families in need.</p>
+    </div>
+    <div class="card highlight">
+      <h3>Local Health Clinic</h3>
+      <p>Affordable healthcare services for all residents.</p>
+    </div>
+    <div class="card highlight">
+      <h3>After-School Program</h3>
+      <p>Educational support and activities for students.</p>
+    </div>
+  </div>
+</section>
+
+<section id="submit">
+  <div class="container">
+    <h2>Submit a New Resource</h2>
+    <form id="resourceForm">
+      <input type="text" id="name" placeholder="Resource Name" required>
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option value="food">Food</option>
+        <option value="health">Health</option>
+        <option value="education">Education</option>
+      </select>
+      <textarea id="description" placeholder="Description" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>About This Hub</h2>
+    <p>This website helps connect community members with important local resources including non-profits, support services, and programs. Our goal is to make it easier for residents to find help and opportunities.</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Community Resource Hub</p>
+</footer>
+
+<script>
+const resources = [
+  { name: "Community Food Bank", category: "food", description: "Free groceries for families." },
+  { name: "Health Clinic", category: "health", description: "Affordable healthcare." },
+  { name: "Tutoring Center", category: "education", description: "Free tutoring for students." }
+];
+
+function displayResources(list) {
+  const container = document.getElementById("resourceList");
+  container.innerHTML = "";
+  list.forEach(r => {
+    container.innerHTML += `
+      <div class="card">
+        <h3>${r.name}</h3>
+        <p>${r.description}</p>
+        <small>Category: ${r.category}</small>
+      </div>`;
+  });
+}
+
+function filterResources() {
+  const search = document.getElementById("search").value.toLowerCase();
+  const filter = document.getElementById("filter").value;
+
+  const filtered = resources.filter(r => {
+    return (
+      (r.name.toLowerCase().includes(search) || r.description.toLowerCase().includes(search)) &&
+      (filter === "all" || r.category === filter)
+    );
+  });
+
+  displayResources(filtered);
+}
+
+document.getElementById("search").addEventListener("input", filterResources);
+document.getElementById("filter").addEventListener("change", filterResources);
+
+document.getElementById("resourceForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const newResource = {
+    name: document.getElementById("name").value,
+    category: document.getElementById("category").value,
+    description: document.getElementById("description").value
+  };
+
+  resources.push(newResource);
+  displayResources(resources);
+  this.reset();
+});
+
+// Initial display
+ displayResources(resources);
+</script>
+
+</body>
+</html>
