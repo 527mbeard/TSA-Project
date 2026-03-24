@@ -6,13 +6,15 @@
 
 body {
     margin: 0;
-    height: 2000px; /* just for scrolling demo */
+    height: 2000px;
+    /* just for scrolling demo */
     font-family: Arial, sans-serif;
 }
 
 .navbar {
     position: fixed;
-    top: -80px; /* hidden above screen */
+    top: -80px;
+    /* hidden above screen */
     left: 0;
     width: 100%;
     background: black;
@@ -20,6 +22,7 @@ body {
     padding: 15px;
     text-align: center;
     transition: top 0.3s ease;
+    z-index: 1000;
 }
 
 .navbar.show {
@@ -28,11 +31,12 @@ body {
 
 .navbar-custom {
     background-color: #414833;
-    border:2px solid #ede0d4;
+    border: 2px solid #ede0d4;
 }
 
 .hero {
     background-color: #414833;
+    position: relative;
 }
 
 .color {
@@ -50,31 +54,207 @@ body {
 }
 
 h1 {
-    text-align:center;
+    text-align: center;
     color: #ede0d4;
-    font-size:1500%;
     font-family: "inter-variable", sans-serif;
     font-variation-settings: "slnt" 0, "wght" 700;
+    font-size: clamp(7rem, 14vw, 14rem);
 }
 
-h2{
+h2 {
     color: #ede0d4;
     font-family: "roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-    text-align:center;
-    font-size:200%;
-    padding-top:35px;
-}
-.corner{
-    border-radius:30px;
-    text-align:center;
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    padding-top: 35px;
 }
 
-.background2{
-    background-color: #414833;
-    height: 500px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+h3 {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "slnt" 0, "wght" 700;
+    color: #656d4a;
+    font-size: 3rem;
 }
+
+h4 {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "slnt" 0, "wght" 400;
+    color: #656d4a;
+    font-size: 25px;
+}
+
+h5 {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "slnt" 0, "wght" 700;
+    color: #ede0d4;
+    font-size: 64px;
+    padding-bottom: 30px;
+}
+
+.hero-img-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    /* spacing here instead */
+}
+
+img.centered-hero {
+    width: 90%;
+    height: auto;
+    border-radius: 30px;
+    border: 4px solid #ede0d4;
+    /* ✅ border shows now */
+    display: block;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+img.corner-second {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    height: auto;
+    border-radius: 50px;
+    padding: 25px;
+}
+
+.background2 {
+    background-color: #ede0d4;
+    padding: 60px 0;
+    /* ✅ instead of fixed height */
+}
+
+/* .container {
+    padding: 60px;
+}
+
+/* Card */
+.card {
+    background-color: #e9e7df;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.card img {
+    width: calc(100% - 40px);
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+/* Content */
+.card-content {
+    padding: 0 20px 20px;
+}
+
+.card h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Button */
+.card button {
+    margin: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #a68a64;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background-color: #414833;
+    color: white;
+}
+
+.col-12 {
+  display: flex;
+} */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Container fix for mobile */
+.container {
+    padding: 40px 20px;
+}
+
+/* Card */
+.card {
+    background-color: #e9e7df;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* Image */
+.card img {
+    width: calc(100% - 40px);
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+/* Content */
+.card-content {
+    padding: 0 20px 20px;
+    flex-grow: 1;
+}
+
+/* Title */
+.card h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Text */
+.card p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Button */
+.card button {
+    margin: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #a68a64;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background-color: #414833;
+    color: white;
+}
+
+\
