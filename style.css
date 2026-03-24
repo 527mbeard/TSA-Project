@@ -93,6 +93,18 @@ h5 {
     padding-bottom: 30px;
 }
 
+.word{
+    font-size:50px;
+}
+
+h6 {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "slnt" 0, "wght" 700;
+    color: #656d4a;
+    font-size: 64px;
+    padding-bottom: 30px ;
+}
+
 .hero-img-wrapper {
     width: 100%;
     max-width: 1300px;
@@ -124,77 +136,8 @@ img.corner-second {
 .background2 {
     background-color: #ede0d4;
     padding: 60px 0;
-    /* ✅ instead of fixed height */
 }
 
-/* .container {
-    padding: 60px;
-}
-
-/* Card */
-.card {
-    background-color: #e9e7df;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-
-.card img {
-    width: calc(100% - 40px);
-    height: 180px;
-    object-fit: cover;
-    border-radius: 20px;
-    margin: 20px;
-}
-
-/* Content */
-.card-content {
-    padding: 0 20px 20px;
-}
-
-.card h2 {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.card p {
-    font-size: 18px;
-    color: #333;
-}
-
-/* Button */
-.card button {
-    margin: 20px;
-    padding: 15px;
-    border: none;
-    border-radius: 25px;
-    background-color: #a68a64;
-    font-size: 14px;
-    text-align: left;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.card button:hover {
-    background-color: #414833;
-    color: white;
-}
-
-.col-12 {
-  display: flex;
-} */
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Container fix for mobile */
 .container {
     padding: 40px 20px;
 }
@@ -257,4 +200,41 @@ img.corner-second {
     color: white;
 }
 
-\
+.form{
+    background-color:#ede0d4;
+}
+
+.footer {
+  background-color: #656d4a;
+  color: black;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.footer-text {
+  max-width: 250px;
+}
+
+.buttonone{
+    background-color:#f6f8ef;
+    padding:20px 15px 20px 15px;
+    border-radius:25px;
+    text-align:center;
+}
+
+.fword{
+    font-size:25px;
+}
+
+.ffword{
+    font-size:25px;
+    color:#f6f8ef;
+}
