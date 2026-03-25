@@ -11,6 +11,17 @@ body {
     background-color: #ede0d4;
 }
 
+h2 {
+    color: #656d4a;
+    font-family: "roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    padding-top: 35px;
+    padding-bottom:35px;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -27,6 +38,16 @@ body {
     font-family: "roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
+}
+
+.color:hover{
+    color:#a68a64;
+    text-decoration: underline;
+}
+
+.color2:hover{
+    color:#a68a64;
+    text-decoration: underline;
 }
 
 .navbar-custom {
@@ -87,8 +108,6 @@ footer {
     text-align: center;
     padding: 10px;
 }
-
-
 
 .footer {
     background-color: #656d4a;

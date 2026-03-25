@@ -46,6 +46,16 @@ body {
     font-style: normal;
 }
 
+.color:hover{
+    color:#a68a64;
+    text-decoration: underline;
+}
+
+.color2:hover{
+    color:#a68a64;
+    text-decoration: underline;
+}
+
 .color2 {
     color: #ede0d4;
     font-family: "roboto", sans-serif;

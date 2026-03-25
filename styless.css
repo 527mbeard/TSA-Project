@@ -1,0 +1,154 @@
+/* #7f5539
+#a68a64
+#ede0d4
+#656d4a
+#414833 */
+
+html,
+body {
+    height: 100%;
+}
+
+.page-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 80px;
+    background-color: #ede0d4;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: #656d4a;
+    font-family: "roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.color {
+    color: #ede0d4;
+    font-family: "roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.color:hover{
+    color:#a68a64;
+    text-decoration: underline;
+}
+
+.navbar-custom {
+    background-color: #414833;
+    border: 2px solid #ede0d4;
+}
+
+.form {
+    background-color: #ede0d4;
+    width: 100%;
+}
+
+h6 {
+    font-family: "inter-variable", sans-serif;
+    font-variation-settings: "slnt" 0, "wght" 700;
+    color: #656d4a;
+    font-size: 64px;
+    /* padding-bottom: 30px; */
+}
+
+.title-2 {
+    color: #656d4a;
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.button-down {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #a68a64;
+    transition: 0.3s;
+
+}
+
+.button-down:hover {
+    background-color: #414833;
+    color: white;
+}
+
+.footer {
+    background-color: #656d4a;
+    color: black;
+}
+
+.footer-color {
+    color: #ede0d4;
+    padding: 20px 20px 40px 20px;
+}
+
+.title-2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.form h2 {
+    margin-top: 5px;
+}
+
+.form .row {
+    align-items: stretch;
+    /* makes both sides equal height */
+}
+
+.form .col-lg-6 {
+    display: flex;
+}
+
+.form .col-lg-6>div {
+    width: 100%;
+}
